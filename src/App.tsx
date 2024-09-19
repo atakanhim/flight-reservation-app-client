@@ -2,20 +2,25 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css'
 import HomePage from "./pages/HomePage";
 import MyReservedFlights from "./pages/MyReservedFlights";
-import { useEffect } from "react";
+import Header from "./components/HomePageComponents/Header";
 function App() {
-  useEffect(() => {
 
-    console.log("reserverd");
-  }, [])
   return (
+    <div className='min-h-screen w-full bg-purple-200 flex justify-center items-center flex-col '>
+      <div className='bg-gray-200 p-5 rounded-2xl w-11/12 '>
+        <Header />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/*" element={<HomePage />} />
+            <Route path="/MyReservedFlights" element={<MyReservedFlights />} />
+          </Routes>
+        </BrowserRouter>
 
-    <BrowserRouter>
-      <Routes>
-        <Route path="/*" element={<HomePage />} />
-        <Route path="/MyReservedFlights" element={<MyReservedFlights />} />
-      </Routes>
-    </BrowserRouter>
+      </div>
+
+    </div>
+
+
 
   )
 }

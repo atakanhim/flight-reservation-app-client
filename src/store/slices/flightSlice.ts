@@ -10,7 +10,7 @@ const initialState:CartState = {
 };
 
 const flightSlice = createSlice({
-  name: "restoran",
+  name: "flight",
   initialState,
   reducers: {
     addToCart: {
@@ -25,7 +25,9 @@ const flightSlice = createSlice({
       reducer: (state, action: PayloadAction<any>) => {
         state.cart.push(action.payload);
       },
-      
+      prepare: (item: any) => ({
+        payload: item
+      })
     }
   },
 });

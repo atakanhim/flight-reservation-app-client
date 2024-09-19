@@ -1,0 +1,24 @@
+{
+    "airports": [
+        {
+            "name": "Los Angeles International Airport",
+            "code": "LAX"
+        },
+        {
+            "name": "John F. Kennedy International Airport",
+            "code": "JFK"
+        },
+        {
+            "name": "Heathrow Airport",
+            "code": "LHR"
+        },
+        {
+            "name": "Tokyo Haneda Airport",
+            "code": "HND"
+        },
+        {
+            "name": "Charles de Gaulle Airport",
+            "code": "CDG"
+        }
+    ]
+}
