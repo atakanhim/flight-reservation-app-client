@@ -4,11 +4,11 @@ import HomePageMain from '../components/HomePageComponents/HomePageMain'
 
 export default function HomePage() {
     return (
-        <div className=" grid grid-cols-[minmax(600px,1fr),200px] gap-4">
+        <div className="flex flex-col 2xl:grid  2xl:grid-cols-[minmax(600px,1fr),200px] gap-4">
             <div className='pt-4 '>
                 <HomePageMain />
             </div>
-            <div className='w-[200px]'>
+            <div className='w-full 2xl:w-[200px]'>
                 <CardList />
             </div>
         </div>

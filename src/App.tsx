@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css'
 import HomePage from "./pages/HomePage";
-import MyReservedFlights from "./pages/MyReservedFlights";
-import Header from "./components/HomePageComponents/Header";
+import Header from "./components/HeaderComponents/HeaderMain";
+import MyBookedFlights from "./pages/MyBookedFlights";
 function App() {
 
   return (
@@ -12,7 +12,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/*" element={<HomePage />} />
-            <Route path="/MyReservedFlights" element={<MyReservedFlights />} />
+            <Route path="/MyBookedFlights" element={<MyBookedFlights />} />
           </Routes>
         </BrowserRouter>
 

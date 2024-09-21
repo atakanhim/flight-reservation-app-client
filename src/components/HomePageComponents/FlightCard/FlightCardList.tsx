@@ -6,7 +6,6 @@ export const FlightCardList = () => {
         <div className='flex flex-col w-full gap-10'>
             <FlightCard />
             <FlightCard />
-
         </div>
 
 

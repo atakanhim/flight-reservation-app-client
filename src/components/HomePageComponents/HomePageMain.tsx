@@ -236,20 +236,20 @@ export default function HomePageMain() {
 
     return (
         <>
-            <div className='bg-white min-h-36 min-w-[1000px] rounded-3xl'>
+            <div className='bg-white min-h-36 min-w-[600px] rounded-3xl'>
                 {buttonsAndTextRender()}
                 {inputsAndCalendarRender()}
                 <div className=' w-full  px-2 py-4'>
                     <button className='border rounded-2xl bg-purple-900 px-4 py-2 text-white'>Show Flights</button>
                 </div>
             </div>
-            <div className='grid grid-cols-10 w-full min-h-[70%] pt-4'>
-                <div className='col-span-8 '>
+            <div className='grid grid-cols-10    w-full min-h-[70%] pt-4'>
+                <div className='col-span-10 xl:col-span-8 '>
                     <div className='flex justify-center items-center'>
                         <FlightCardList />
                     </div>
                 </div>
-                <div className='col-span-2 border ml-2   border-blue-800'>
+                <div className='col-span-2 w-[230px] hidden xl:block border ml-2  '>
                     <div className='flex justify-center items-center'>
                         <FiltreMain />
                     </div>

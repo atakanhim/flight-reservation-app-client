@@ -6,7 +6,7 @@ import { FaCarRear } from "react-icons/fa6";
 export default function CardList() {
 
     return (
-        <div className="border flex flex-col justify-center items-center gap-3 p-3 ">
+        <div className="border flex flex-row 2xl:flex-col justify-center items-center gap-3 p-3 ">
             <Card
                 src={Card1}
                 alt="Card1"

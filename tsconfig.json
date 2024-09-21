@@ -2,16 +2,14 @@
   "files": [],
   "compilerOptions": {
     "strict": true,
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@interfaces/*": ["types/*"],
+      "@/*": ["*"]
     }
   },
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ],
+  ]
 }
-
