@@ -4,7 +4,7 @@ import { FaGlobe } from 'react-icons/fa6'
 import rrimage from '../../assets/rrprofile.jpeg'
 export default function Header() {
     return (
-        <div className='flex flex-row justify-between items-center border border-black p-3'>
+        <div className='flex flex-row justify-between items-center   p-3'>
             <div className='flex-row flex  justify-center items-center gap-2'>
                 <div><FaPlane color='white' className='bg-purple-950 rounded-full
                  text-4xl' /></div>

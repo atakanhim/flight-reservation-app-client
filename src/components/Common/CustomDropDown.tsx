@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa6';
 
 interface SideBarButtonProps {
-    textColor: string;
+    textStyle: string;
     text: string;
     border: string;
     inlineDropDownMenu: string;
 }
 
-const CustomDropDown: React.FC<SideBarButtonProps> = ({ textColor, border, text, inlineDropDownMenu }) => {
+const CustomDropDown: React.FC<SideBarButtonProps> = ({ textStyle, border, text, inlineDropDownMenu }) => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
 
     // Function to handle dropdown visibility toggle
@@ -20,7 +20,7 @@ const CustomDropDown: React.FC<SideBarButtonProps> = ({ textColor, border, text,
             className={`relative  transition-all duration-300 ${border} justify-center items-center flex gap-2 px-3 py-2 border-gray-100 ${isDropdownOpen && "border-purple-950"}  hover:border-purple-950 cursor-pointer rounded-xl`}
             onClick={handlePressButton}
         >
-            <button className={`text-${textColor}`}>{text}</button>
+            <button className={`${textStyle}`}>{text}</button>
             {isDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
             {/* Dropdown content */}
             {isDropdownOpen && (
