@@ -4,7 +4,7 @@ import MainContainer from '../components/MyBookedFlightsComponents/MainContainer
 
 export default function MyBookedFlights() {
     return (
-        <div className='flex flex-col mt-3 min-h-[1000px]'>
+        <div className='flex flex-col  min-h-[770px]'>
             <SideBar />
             <MainContainer />
         </div>

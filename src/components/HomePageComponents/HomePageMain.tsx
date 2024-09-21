@@ -243,13 +243,13 @@ export default function HomePageMain() {
                     <button className='border rounded-2xl bg-purple-900 px-4 py-2 text-white'>Show Flights</button>
                 </div>
             </div>
-            <div className='grid grid-cols-10    w-full min-h-[70%] pt-4'>
-                <div className='col-span-10 xl:col-span-8 '>
+            <div className=' flex flex-row justify-between  w-full min-h-[70%] pt-4'>
+                <div className=' w-full xl:col-span-8 '>
                     <div className='flex justify-center items-center'>
                         <FlightCardList />
                     </div>
                 </div>
-                <div className='col-span-2 w-[230px] hidden xl:block border ml-2  '>
+                <div className='border border-red-300 w-[230px] hidden xl:block  ml-2  '>
                     <div className='flex justify-center items-center'>
                         <FiltreMain />
                     </div>
