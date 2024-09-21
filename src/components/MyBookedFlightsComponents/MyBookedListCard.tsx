@@ -28,13 +28,14 @@ const MyBookedListCard: React.FC<BookedListCardProps> = ({
                     </p>
                 </div>
                 <div className='flex flex-row w-full   justify-between items-center'>
-                    <div className=' lg:ml-10 flex flex-col'>
-                        <div className='ml-3'>
-                            Delta Airlines
-                        </div>
-                        <div>
+                    <div className='  flex flex-col'>
+                        <div className='ml-12'>
+                            <p>Delta Airlines</p>
                             <CustomDropDown border='ml-0' inlineDropDownMenu='top-10' text='Flight Details' textStyle='text-blue-500' />
                         </div>
+
+
+
 
                     </div>
                     <div className='flex flex-col'>

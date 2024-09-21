@@ -17,7 +17,7 @@ const CustomDropDown: React.FC<SideBarButtonProps> = ({ textStyle, border, text,
     };
     return (
         <div
-            className={`relative  transition-all duration-300 ${border} justify-center items-center flex gap-2 px-3 py-2 border-gray-100 ${isDropdownOpen && "border-purple-950"}  hover:border-purple-950 cursor-pointer rounded-xl`}
+            className={`relative  transition-all duration-300  ${border} justify-center items-center flex gap-2  border-gray-100 ${isDropdownOpen && "border-purple-950"}  hover:border-purple-950 cursor-pointer rounded-xl`}
             onClick={handlePressButton}
         >
             <button className={`${textStyle}`}>{text}</button>

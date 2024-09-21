@@ -9,7 +9,7 @@ const MainContainer = () => {
             <div className='flex gap-2 flex-row justify-between items-center   min-h-10'>
                 <div className='flex flex-row justify-center items-center'>
                     <p>Sort By:</p>
-                    <CustomDropDown inlineDropDownMenu='top-8 left-2 ' text='Recommended' textStyle='text-black font-bold ' border='' />
+                    <CustomDropDown inlineDropDownMenu='top-8 left-2 ' text='Recommended' textStyle='text-black font-bold ' border='px-3 py-2' />
                 </div>
                 <div className='flex flex-row justify-center items-center gap-1'>
                     <FaInfoCircle color='blue' /><p>Avg Fare: $225</p>

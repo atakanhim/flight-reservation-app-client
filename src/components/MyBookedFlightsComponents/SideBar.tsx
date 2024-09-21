@@ -19,7 +19,7 @@ const YourComponent = () => {
 
                 {/* Edit Search button */}
 
-                <CustomDropDown inlineDropDownMenu='top-8' text='Edit Search' border='border' textStyle="text-blue-300" />
+                <CustomDropDown inlineDropDownMenu='top-8' text='Edit Search' border='border px-3 py-2' textStyle="text-blue-300" />
 
             </div>
             <div className=''>

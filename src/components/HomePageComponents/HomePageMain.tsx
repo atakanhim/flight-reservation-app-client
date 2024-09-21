@@ -95,7 +95,7 @@ export default function HomePageMain() {
         return <>
             <div className='flex flex-row justify-between items-center p-3 '>
                 <div className='flex gap-3 justify-center items-center '>
-                    <FaPlane />
+                    <FaPlane className='ml-1' />
                     <h3>BOOK YOUR FLIGHT</h3>
                 </div>
                 <div className='flex flex-row'>
@@ -249,7 +249,7 @@ export default function HomePageMain() {
                         <FlightCardList />
                     </div>
                 </div>
-                <div className='border border-red-300 w-[230px] hidden xl:block  ml-2  '>
+                <div className=' w-[230px] hidden xl:block  ml-2  '>
                     <div className='flex justify-center items-center'>
                         <FiltreMain />
                     </div>
