@@ -7,8 +7,8 @@ const YourComponent = () => {
 
 
     return (
-        <div className='flex bg-white w-full p-3 justify-between items-center border  rounded-t-2xl'>
-            <div className='flex flex-row gap-3'>
+        <div className='flex flex-wrap bg-white w-full p-3 justify-between items-center border  rounded-t-2xl'>
+            <div className='flex flex-wrap flex-row gap-3'>
                 {/* Side bar sol taraf */}
                 <SideBarButton value="Times" />
                 <SideBarButton value="Stops" />

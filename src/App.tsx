@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className='min-h-screen w-full bg-purple-200 flex justify-center items-center flex-col '>
-      <div className='bg-gray-200 p-5 rounded-2xl w-11/12 '>
+      <div className='bg-gray-200 p-5 rounded-2xl w-full lg:w-11/12 '>
 
         <BrowserRouter>
           <Header />

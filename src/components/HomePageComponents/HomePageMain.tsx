@@ -6,12 +6,15 @@ import TextField from '@mui/material/TextField';
 import dayjs from 'dayjs';
 import { FlightCardList } from './FlightCard/FlightCardList';
 import FiltreMain from './Filtre/FiltreMain';
+import { useMediaQuery } from '@mui/material';
 
 
 export default function HomePageMain() {
 
     const [selected, setSelected] = useState('roundTrip'); // Başlangıçta 'roundTrip' seçili
     //
+    const isMobile = useMediaQuery('(max-width:800px)'); // Detect screen width 800px and below
+
 
 
     // dropdownMenu Use States :start
@@ -87,13 +90,13 @@ export default function HomePageMain() {
     }
     const buttonsAndTextRender = () => {
         return <>
-            <div className='flex flex-row justify-between items-center p-3 w-full '>
+            <div className='flex text-sm md:text-base flex-row justify-between items-center p-3 w-full '>
                 <div className='flex gap-3 justify-center items-center '>
                     <FaPlane className='ml-1' />
                     <h3>BOOK YOUR FLIGHT</h3>
                 </div>
-                <div className='flex flex-row'>
-                    <div className="flex border-2 border-purple-500 rounded-full overflow-hidden">
+                <div className='flex  flex-row'>
+                    <div className="flex  border-2 border-purple-500 rounded-full overflow-hidden">
                         <button
                             onClick={() => setSelected('roundTrip')}
                             className={`px-4 py-2 ${selected === 'roundTrip' ? 'bg-purple-800 text-white' : 'bg-white text-purple-500'
@@ -118,13 +121,12 @@ export default function HomePageMain() {
 
     const inputsAndCalendarRender = () => {
         return <>
-            <div className='flex flex-col xl:flex-row gap-3 justify-between  items-center   w-full '>
-                <div className='flex  justify-center items-center '>
+            <div className='flex flex-col xl:flex-row gap-3 justify-between  items-center   w-full text-xs'>
+                <div className='flex justify-center flex-wrap sm:flex-nowrap  gap-2 md:gap-0 items-center '>
                     {renderInputWithProps(true)}
                     {renderInputWithProps(false)}
                 </div>
-                <div className='flex flex-row  '>
-
+                <div className='flex flex-row flex-wrap justify-center items-center gap-2 md:gap-0'>
                     {renderCalendar(true)}
                     {selected == "roundTrip" && renderCalendar(false)}
                 </div>
@@ -135,15 +137,15 @@ export default function HomePageMain() {
     };
     const renderInputWithProps = (roundedLeft: boolean) => { // rounded left ise Departure dır
         return <>
-            <div className='flex flex-row justify-between items-center ml-1 '>
-                <div className='flex  justify-center items-center '>
-                    <div className={`p-3 border  border-r-0 h-10 ${roundedLeft ? "rounded-l-full " : ""} ${(roundedLeft ? showDropdownDeparture : showDropdownArrival) ? "border-purple-400" : "border-gray-300"}  `}>
+            <div className='flex flex-row justify-between items-center ml-1'>
+                <div className='flex justify-center items-center '>
+                    <div className={`p-3 border  border-r-0 h-10 ${roundedLeft ? " rounded-l-full " : "rounded-l-full sm:rounded-l-none"} ${(roundedLeft ? showDropdownDeparture : showDropdownArrival) ? "border-purple-400" : "border-gray-300"}  `}>
                         {roundedLeft ? <FaPlaneDeparture /> : <FaPlaneArrival />}
 
                     </div>
                     <div className="relative">
                         {/* Input ve button */}
-                        <div className={`flex items-center border h-10 min-w-56 ${roundedLeft ? " " : "rounded-r-full"}  ${(roundedLeft ? showDropdownDeparture : showDropdownArrival) ? "border-purple-400" : "border-gray-300"} border-l-0 px-3 py-2`}>
+                        <div className={`flex items-center border h-10 sm:min-w-56 ${roundedLeft ? " rounded-r-full sm:rounded-r-none" : "rounded-r-full"}  ${(roundedLeft ? showDropdownDeparture : showDropdownArrival) ? "border-purple-400" : "border-gray-300"} border-l-0 px-3 py-2`}>
                             <input
                                 type="text"
                                 value={roundedLeft ? departureInput : arrivalInput}
@@ -181,11 +183,7 @@ export default function HomePageMain() {
                         )}
                     </div>
                 </div>
-                <div className='flex flex-row'>
 
-
-
-                </div>
             </div>
 
         </>
@@ -203,7 +201,7 @@ export default function HomePageMain() {
                             {...params}
                             sx={{
                                 '& .MuiInputBase-root': {
-                                    borderRadius: isDeparture ? '9999px 0 0 9999px' : ' 0 9999px  9999px 0 ', // Right side fully rounded
+                                    borderRadius: isMobile ? '9999px' : isDeparture ? '9999px 0 0 9999px' : '0 9999px 9999px 0', // Fully rounded on mobile
                                     height: 40,
                                     width: 250,
                                 },
@@ -230,7 +228,7 @@ export default function HomePageMain() {
 
     return (
         <>
-            <div className='bg-white min-h-36 min-w-[600px] rounded-3xl  flex flex-col justify-center items-center'>
+            <div className='bg-white min-h-36 sm:min-w-[600px] rounded-3xl  flex flex-col justify-center items-center'>
                 {buttonsAndTextRender()}
                 {inputsAndCalendarRender()}
                 <div className='text-center xl:text-start  w-full  px-2 py-4'>

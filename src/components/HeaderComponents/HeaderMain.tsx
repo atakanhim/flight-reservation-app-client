@@ -8,20 +8,20 @@ export default function Header() {
             <div className='flex-row flex  justify-center items-center gap-2'>
                 <a href="./"><FaPlane color='white' className='bg-purple-950 rounded-full
                  text-4xl' /></a>
-                <Link to="/">Hakkında Sayfası</Link>
+                <Link to="/" className='text-xs sm:text-lg'>Hakkında Sayfası</Link>
             </div>
-            <div className='flex-row flex  justify-center items-center gap-2'>
+            <div className='flex-row text-xs sm:text-lg  flex justify-center items-center gap-2 '>
                 <div className='flex flex-row justify-center items-center gap-2'>
                     <FaTicketAlt color="rgb(88 28 135)" />
-                    <Link to='/MyBookedFlights' className=' cursor-pointer transition-all duration-200 border-b-2 hover:border-purple-950 '>My Booked Flights</Link>
+                    <Link to='/MyBookedFlights' className=' cursor-pointer transition-all  duration-200 border-b-2 hover:border-purple-950 '>My Booked Flights</Link>
 
                 </div>
-                <div className='flex flex-row justify-center items-center gap-2'>
+                <div className='hidden sm:flex flex-row justify-center items-center gap-2'>
                     <FaTag color="rgb(88 28 135)" />
                     <Link to='' className=' cursor-pointer transition-all duration-200 border-b-2 hover:border-purple-950 '>Deals</Link>
 
                 </div>
-                <div className='flex flex-row justify-center items-center gap-2'>
+                <div className='hidden sm:flex flex-row justify-center items-center gap-2'>
                     <FaGlobe color="rgb(88 28 135)" />
                     <Link to='' className=' cursor-pointer transition-all duration-200 border-b-2 hover:border-purple-950 '>Discover</Link>
 
