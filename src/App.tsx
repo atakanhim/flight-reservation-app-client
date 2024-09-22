@@ -8,8 +8,9 @@ function App() {
   return (
     <div className='min-h-screen w-full bg-purple-200 flex justify-center items-center flex-col '>
       <div className='bg-gray-200 p-5 rounded-2xl w-11/12 '>
-        <Header />
+
         <BrowserRouter>
+          <Header />
           <Routes>
             <Route path="/*" element={<HomePage />} />
             <Route path="/MyBookedFlights" element={<MyBookedFlights />} />
