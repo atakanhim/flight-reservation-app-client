@@ -1,4 +1,3 @@
-import React from 'react'
 import FlightCard from './FlightCard'
 
 export const FlightCardList = () => {

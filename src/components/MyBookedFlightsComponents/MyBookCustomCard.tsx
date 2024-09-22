@@ -1,4 +1,3 @@
-import React from 'react'
 
 const MyBookCustomCard = ({ price, text }: { price?: number, text?: string } = {}) => {
     return (

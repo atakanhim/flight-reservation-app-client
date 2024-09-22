@@ -1,5 +1,4 @@
-import React, { FC } from 'react'
-import { IconType } from 'react-icons';
+import { FC } from 'react'
 import { FaPlaneDeparture, FaPlaneArrival, FaPlane } from "react-icons/fa6";
 
 interface FlightCardProps {

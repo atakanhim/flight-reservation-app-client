@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Radio, RadioGroup, FormControl, FormControlLabel, FormLabel } from '@mui/material';
 import CustomRadioGroup from '../../Common/CustomRadioGroup';
 import { RadioItems } from '../../../types/interfaces';
 

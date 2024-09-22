@@ -1,4 +1,3 @@
-import React from 'react'
 import MyBookedListCard from './MyBookedListCard'
 
 const MyBookedList = () => {
