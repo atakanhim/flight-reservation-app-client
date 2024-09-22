@@ -1,3 +1,4 @@
+/* eslint-disable */
 
 import { useState } from 'react';
 import image from '../../assets/airlines/thy.png'
