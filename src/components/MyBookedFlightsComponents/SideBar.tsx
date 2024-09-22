@@ -7,7 +7,7 @@ const YourComponent = () => {
 
 
     return (
-        <div className='flex flex-wrap bg-white w-full p-3 justify-between items-center border  rounded-t-2xl'>
+        <div className='flex text-xs md:text-base   bg-white w-full p-3 justify-between items-center border  rounded-t-2xl'>
             <div className='flex flex-wrap flex-row gap-3'>
                 {/* Side bar sol taraf */}
                 <SideBarButton value="Times" />
@@ -18,7 +18,7 @@ const YourComponent = () => {
 
                 {/* Edit Search button */}
 
-                <CustomDropDown inlineDropDownMenu='top-8' text='Edit Search' border='border px-3 py-2' textStyle="text-blue-300" />
+                <CustomDropDown inlineDropDownMenu='top-8' text='Edit Search' border='border px-3 py-2 z-30' textStyle="text-blue-300" />
 
             </div>
             <div className=''>

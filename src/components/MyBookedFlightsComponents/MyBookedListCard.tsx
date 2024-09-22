@@ -23,15 +23,15 @@ const MyBookedListCard: React.FC<BookedListCardProps> = ({
                     <div>
                         <AirlineLogoRender airlineCode={"THY"} />
                     </div>
-                    <p className='text-2xl font-light'>
+                    <p className='sm:text-2xl font-light'>
                         7:40 AM - 9:12 AM
                     </p>
                 </div>
                 <div className='flex flex-row w-full   justify-between items-center'>
                     <div className='  flex flex-col'>
-                        <div className='ml-12'>
+                        <div className='xm:ml-12'>
                             <p>Delta Airlines</p>
-                            <CustomDropDown border='ml-0' inlineDropDownMenu='top-10' text='Flight Details' textStyle='text-blue-500' />
+                            <CustomDropDown border='ml-0' inlineDropDownMenu='top-5 ' text='Flight Details' textStyle='text-blue-500' />
                         </div>
 
 

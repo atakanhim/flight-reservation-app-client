@@ -17,14 +17,14 @@ const CustomDropDown: React.FC<SideBarButtonProps> = ({ textStyle, border, text,
     };
     return (
         <div
-            className={`relative  transition-all duration-300  ${border} justify-center items-center flex gap-2  border-gray-100 ${isDropdownOpen && "border-purple-950"}  hover:border-purple-950 cursor-pointer rounded-xl`}
+            className={`relative  text-xs md:text-base  transition-all duration-300  ${border} justify-center items-center flex gap-2  border-gray-100 ${isDropdownOpen && "border-purple-950"}  hover:border-purple-950 cursor-pointer rounded-xl`}
             onClick={handlePressButton}
         >
             <button className={`${textStyle}`}>{text}</button>
             {isDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
             {/* Dropdown content */}
             {isDropdownOpen && (
-                <div className={`absolute border-b ${inlineDropDownMenu} border-r border-purple-950  w-32 bg-white shadow-lg  p-3 rounded-b-lg transition-all duration-1000`}>
+                <div className={`absolute border-b ${inlineDropDownMenu} border-r border-purple-950  w-[100px]   sm:w-32 bg-white shadow-lg  p-3 rounded-b-lg transition-all duration-1000`}>
                     <p className="py-1">Option 1</p>
                     <p className="py-1">Option 2</p>
                     <p className="py-1">Option 3</p>
