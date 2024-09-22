@@ -1,4 +1,3 @@
-import React from 'react'
 import FiltreSortBy from './FiltreSortBy'
 import FiltreRadioBoxs from './FiltreRadioBoxs'
 

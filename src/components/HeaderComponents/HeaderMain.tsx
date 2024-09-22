@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaPlane, FaTag, FaTicketAlt } from 'react-icons/fa'
 import { FaGlobe } from 'react-icons/fa6'
 import rrimage from '../../assets/rrprofile.jpeg'

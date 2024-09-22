@@ -1,7 +1,6 @@
-/* eslint-disable */
 
 import { useState } from 'react';
-import image from '../../assets/airlines/thy.png'
+
 const AirlineLogoRender = ({ airlineCode }) => {
     const [logoPath, setLogoPath] = useState(`src/assets/airlines/${airlineCode.toLowerCase()}.png`);
 

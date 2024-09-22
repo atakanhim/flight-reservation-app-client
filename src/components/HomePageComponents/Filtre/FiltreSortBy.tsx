@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Select, MenuItem, FormControl, InputLabel, SelectChangeEvent } from '@mui/material';
+import { useState } from 'react'
+import { Select, MenuItem, FormControl, SelectChangeEvent } from '@mui/material';
 
 export default function FiltreSortBy() {
     const [sortBy, setSortBy] = useState('Lowest Price');

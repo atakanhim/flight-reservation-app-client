@@ -1,7 +1,6 @@
-/* eslint-disable */
 
-import React, { useState } from 'react';
-import { Radio, RadioGroup, FormControl, FormControlLabel, FormLabel } from '@mui/material';
+import React, { } from 'react';
+import { RadioGroup, FormControl, } from '@mui/material';
 import CustomFormControlLabel from './CustomFormControlLabel';
 import { RadioItems } from '../../types/interfaces';
 

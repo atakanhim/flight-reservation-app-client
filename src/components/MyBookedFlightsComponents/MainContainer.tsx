@@ -1,4 +1,3 @@
-import React from 'react'
 import CustomDropDown from '../Common/CustomDropDown'
 import { FaInfoCircle } from 'react-icons/fa'
 import MyBookedList from './MyBookedList'

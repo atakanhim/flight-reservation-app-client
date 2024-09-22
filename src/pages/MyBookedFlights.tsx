@@ -1,4 +1,3 @@
-import React from 'react'
 import SideBar from '../components/MyBookedFlightsComponents/SideBar'
 import MainContainer from '../components/MyBookedFlightsComponents/MainContainer'
 

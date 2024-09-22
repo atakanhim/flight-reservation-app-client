@@ -1,7 +1,7 @@
 import { DatePicker } from '@mui/x-date-pickers';
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { FaPlane } from "react-icons/fa";
-import { FaPlaneArrival, FaPlaneDeparture, FaCalendarDay } from "react-icons/fa";
+import { FaPlaneArrival, FaPlaneDeparture } from "react-icons/fa";
 import TextField from '@mui/material/TextField';
 import dayjs from 'dayjs';
 import { FlightCardList } from './FlightCard/FlightCardList';
@@ -29,13 +29,7 @@ export default function HomePageMain() {
     const [returnDate, setReturnDate] = useState(null);
     // calendar states:end
 
-    const flights = [{
-        "id": 1,
-        "departure": "Istanbul",
-        "arrival": "Ankara",
-        "flightDate": "2023-03-01",
-        "returnDate": "2023-03-03",
-    }];
+
 
 
     // Havalimanı verileri (statik JSON)
