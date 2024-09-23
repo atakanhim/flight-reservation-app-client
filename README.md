@@ -1,7 +1,7 @@
 # Flight-Reservation-App
 
 ## ⚙️ Kullanılan Teknolojiler
-Bu proje MERN (MongoDB, Express.js, React.js, Node.js) teknolojileri ile geliştirilmiştir. 
+Bu proje MERN (MongoDB, Express.js, React.js, Node.js) teknolojileri ile geliştirilmiştir ek olarak ` React.js Vite.js ile beraber kullanılmıştır`. 
 Projede Schiphol Havalimanına ait API kullanılılmıştır.
 Estetik ve kullanıcı dostu bir arayüz tasarlamak amacıyla Tailwind CSS, Material UI, Day.js ve SweetAlert gibi araçlar tercih edilmiştir.
 Projemde state management için Redux kullanarak slice'lar entegre ettim. Ancak, uygulamanın ihtiyaçlarına göre bu yapıyı kullanmaya gerek duymadım. Bu nedenle, slice'ların sağladığı modülerlik ve düzen avantajlarından yararlanmadım.
@@ -9,14 +9,38 @@ Projemde state management için Redux kullanarak slice'lar entegre ettim. Ancak,
 ## 📜 Proje Açıklaması
 Projede, kullanıcının seçtiği uçuş yönü ve tarihine göre uçuşlar filtrelenebilmektedir. API Schiphol olduğundan, gideceğimiz yer ve kalkış yapılacak yerlerden birinin mutlaka bir havalimanı olması gerekmektedir. Uygulama, bu gereksinimlere göre RESPONSIVE olarak tasarlanmıştır.
 
-## 🌟 Projemi Deneyimleyin
+## 🌟 Projemi Canlı Test Edin
 
-[Bu adrese tıklayarak canlı demosuna ulaşabilirsiniz ](flight-reservation.onrender.com)
+[Bu adrese tıklayarak canlı demosuna ulaşabilirsiniz [flight-reservation.onrender.com] ](https://flight-reservation.onrender.com/)
 
- Uygulama, onrender.com sitesi üzerinden canlıya alınmıştır. Ücretsiz sürüm seçeneği ile projeyi başlattığım için Server kısmı kısmen ayakta durumundadır; bu durumda uygulama, tekrar çalıştırılana kadar uyku moduna girmektedir. Bu, `ilk denemenizde` verilerin 50-60 saniye gecikmeli çekilmesine neden olabilir. Ayrıca, uygulamanın her zaman aktif kalması için statik olarak publish edilmiştir. Bu nedenle, `/MyFlightsReservation`  sayfasına doğrudan bağlantı ile gitmek yerine başka bir yöntemle erişmeye çalışırsanız 404 hatası alabilirsiniz.
-"flight-reservation.onrender.com"
+ Uygulamanın her 2 tarafınıda (Client ve Server) onrender.com sitesi üzerinden canlıya alınmıştır. Ücretsiz sürüm seçeneği ile projeyi başlattığım için `Server` kısmı kısmen ayakta durumundadır; bu durumda uygulama, tekrar çalıştırılana kadar uyku moduna girmektedir. Bu, `ilk denemenizde` verilerin 50-60 saniye gecikmeli çekilmesine neden olabilir. Ayrıca, uygulamanın her zaman aktif kalması için `Client ` ` statik `  olarak publish edilmiştir. Bu nedenle, `/MyFlightsReservation`  sayfasına doğrudan bağlantı ile gitmek yerine başka bir yöntemle erişmeye çalışırsanız 404 hatası alabilirsiniz.
 
 
+## 💻 Projemi Bilgisayarınızda Çalıştırın
+
+Projeyi klonlayın
+
+```bash
+  gh repo clone atakanhim/flight-reservation-app-client
+```
+
+Proje dizinine gidin
+
+```bash
+  cd my-project
+```
+
+Gerekli paketleri yükleyin
+
+```bash
+  npm install
+```
+
+Sunucuyu çalıştırın
+
+```bash
+  npm run dev   
+```
 
 ## 📷 Ekran Görüntüleri
 
