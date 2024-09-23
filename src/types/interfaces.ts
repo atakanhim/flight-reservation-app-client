@@ -4,3 +4,4 @@ export interface RadioItems {
     label: string;
     price?:number;
 }
+export type TripType = 'one-way' | 'round-trip';

@@ -1,12 +1,16 @@
-import FlightCard from './FlightCard'
+import { FlightData } from '../../../types/flight';
+import FlightCard from './FlightCard';
 
-export const FlightCardList = () => {
+interface FlightCardListProps {
+    flightDatas: FlightData[];
+}
+
+export const FlightCardList = ({ flightDatas }: FlightCardListProps) => {
     return (
         <div className='flex flex-col w-full gap-10'>
-            <FlightCard />
-            <FlightCard />
+            {flightDatas && flightDatas.map((flight, index) => (
+                <FlightCard key={index} flightData={flight} />
+            ))}
         </div>
-
-
-    )
-}
+    );
+};

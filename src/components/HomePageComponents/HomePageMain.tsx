@@ -1,4 +1,4 @@
-import { DatePicker } from '@mui/x-date-pickers';
+import { DatePicker, DateBuilderReturnType } from '@mui/x-date-pickers';
 import { useState } from 'react'
 import { FaPlane } from "react-icons/fa";
 import { FaPlaneArrival, FaPlaneDeparture } from "react-icons/fa";
@@ -7,11 +7,16 @@ import dayjs from 'dayjs';
 import { FlightCardList } from './FlightCard/FlightCardList';
 import FiltreMain from './Filtre/FiltreMain';
 import { useMediaQuery } from '@mui/material';
+import { getFlightsFromDB } from '../../api/api';
+import { TripType } from '../../types/interfaces';
+import { FlightData } from '../../types/flight';
 
 
 export default function HomePageMain() {
 
-    const [selected, setSelected] = useState('roundTrip'); // Başlangıçta 'roundTrip' seçili
+    const [flightData, setFlightData] = useState<FlightData[]>([])
+
+    const [selected, setSelected] = useState<TripType>("round-trip"); // Başlangıçta 'roundTrip' seçili
     //
     const isMobile = useMediaQuery('(max-width:800px)'); // Detect screen width 800px and below
 
@@ -31,7 +36,15 @@ export default function HomePageMain() {
     const [flightDate, setFlightDate] = useState(null);
     const [returnDate, setReturnDate] = useState(null);
     // calendar states:end
+    const handleShowFlights = async () => {
+        setFlightData([]);
+        console.log("data:")
 
+        const data = await getFlightsFromDB(flightDate?.format('YYYY-MM-DD'), arrival, departure, returnDate?.format('YYYY-MM-DD'), selected);
+        console.log(data);
+
+        setFlightData(data);
+    }
 
 
 
@@ -98,15 +111,15 @@ export default function HomePageMain() {
                 <div className='flex  flex-row'>
                     <div className="flex  border-2 border-purple-500 rounded-full overflow-hidden">
                         <button
-                            onClick={() => setSelected('roundTrip')}
-                            className={`px-4 py-2 ${selected === 'roundTrip' ? 'bg-purple-800 text-white' : 'bg-white text-purple-500'
+                            onClick={() => setSelected('round-trip')}
+                            className={`px-4 py-2 ${selected === 'round-trip' ? 'bg-purple-800 text-white' : 'bg-white text-purple-500'
                                 }`}
                         >
                             Round trip
                         </button>
                         <button
-                            onClick={() => setSelected('oneWay')}
-                            className={`px-4 py-2 ${selected === 'oneWay' ? 'bg-purple-800 text-white' : 'bg-white text-purple-500'
+                            onClick={() => setSelected('one-way')}
+                            className={`px-4 py-2 ${selected === 'one-way' ? 'bg-purple-800 text-white' : 'bg-white text-purple-500'
                                 }`}
                         >
                             One way
@@ -128,7 +141,7 @@ export default function HomePageMain() {
                 </div>
                 <div className='flex flex-row flex-wrap justify-center items-center gap-2 md:gap-0'>
                     {renderCalendar(true)}
-                    {selected == "roundTrip" && renderCalendar(false)}
+                    {selected == "round-trip" && renderCalendar(false)}
                 </div>
 
             </div>
@@ -194,7 +207,7 @@ export default function HomePageMain() {
                 label={isDeparture ? "Departure date" : "Return date"}
                 minDate={dayjs()}
                 value={isDeparture ? flightDate : returnDate}
-                onChange={(date) => isDeparture ? setFlightDate(date) : setReturnDate(date)}
+                onChange={(date) => { isDeparture ? setFlightDate(date) : setReturnDate(date) }}
                 slots={{
                     textField: (params) => (
                         <TextField
@@ -232,13 +245,13 @@ export default function HomePageMain() {
                 {buttonsAndTextRender()}
                 {inputsAndCalendarRender()}
                 <div className='text-center xl:text-start  w-full  px-2 py-4'>
-                    <button className='border rounded-2xl bg-purple-900 px-4 py-2 text-white'>Show Flights</button>
+                    <button onClick={handleShowFlights} className='border rounded-2xl bg-purple-900 px-4 py-2 text-white'>Show Flights</button>
                 </div>
             </div>
             <div className=' flex flex-row justify-between  w-full min-h-[70%] pt-4'>
                 <div className=' w-full xl:col-span-8 '>
                     <div className='flex justify-center items-center'>
-                        <FlightCardList />
+                        <FlightCardList flightDatas={flightData} />
                     </div>
                 </div>
                 <div className=' w-[230px] hidden xl:block  ml-2  '>
