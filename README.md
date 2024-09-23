@@ -7,8 +7,7 @@ Estetik ve kullanıcı dostu bir arayüz tasarlamak amacıyla Tailwind CSS, Mate
 Projemde state management için Redux kullanarak slice'lar entegre ettim. Ancak, uygulamanın ihtiyaçlarına göre bu yapıyı kullanmaya gerek duymadım. Bu nedenle, slice'ların sağladığı modülerlik ve düzen avantajlarından yararlanmadım.
 
 ## 📜 Proje Açıklaması
-
-Projede, kullanıcının seçtiği uçuş yönü ve tarihine göre uçuşlar filtrelenebilmektedir. API Schiphol olduğundan, gideceğimiz yer ve kalkış yapılacak yerlerden birinin mutlaka bir havalimanı olması gerekmektedir. Uygulama, bu gereksinimlere göre tasarlanmıştır.
+Projede, kullanıcının seçtiği uçuş yönü ve tarihine göre uçuşlar filtrelenebilmektedir. API Schiphol olduğundan, gideceğimiz yer ve kalkış yapılacak yerlerden birinin mutlaka bir havalimanı olması gerekmektedir. Uygulama, bu gereksinimlere göre RESPONSIVE olarak tasarlanmıştır.
 
 ## 🌟 Projemi Deneyimleyin
 
