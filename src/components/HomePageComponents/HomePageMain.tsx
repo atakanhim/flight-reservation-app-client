@@ -38,10 +38,8 @@ export default function HomePageMain() {
     // calendar states:end
     const handleShowFlights = async () => {
         setFlightData([]);
-        console.log("data:")
 
         const data = await getFlightsFromDB(flightDate?.format('YYYY-MM-DD'), arrival, departure, returnDate?.format('YYYY-MM-DD'), selected);
-        console.log(data);
 
         setFlightData(data);
     }

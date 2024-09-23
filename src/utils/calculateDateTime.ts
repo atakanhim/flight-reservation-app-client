@@ -1,17 +1,23 @@
+import moment from "moment";
+
 export function calculateTimeDifference(startTime: string, endTime: string): string {
-    // Zaman damgalarını Date nesnelerine dönüştürme
-    const startDate = new Date(startTime);
-    const endDate = new Date(endTime);
-  
-    // Milisaniye cinsinden farkı hesaplama
-    const differenceInMilliseconds = endDate.getTime() - startDate.getTime();
-  
-    // Milisaniyeleri gün, saat, dakika ve saniyeye çevirme
-    const seconds = Math.floor((differenceInMilliseconds / 1000) % 60);
-    const minutes = Math.floor((differenceInMilliseconds / 1000 / 60) % 60);
-    const hours = Math.floor((differenceInMilliseconds / (1000 * 60 * 60)) % 24);
-    const days = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24));
-  
-    // Sonucu formatlama
-    return `${days} gün, ${hours} saat, ${minutes} dakika, ${seconds} saniye`;
+
+  const dateStart = moment.utc(startTime).utcOffset(2);
+  const dateEnd = moment.utc(endTime).utcOffset(2);
+
+  const duration = moment.duration(dateEnd.diff(dateStart));
+  let hours = Math.floor(duration.asHours());
+  let minutes = duration.minutes();
+  let seconds = duration.seconds();
+
+
+  if (hours < 0)
+      hours *= -1;
+  if (minutes < 0)
+      minutes *= -1;
+  if (seconds < 0)
+      seconds *= -1;
+
+  return `${hours > 0 ? hours + 'h-' : ''}${minutes > 0 ? minutes + 'm-' : ''}${seconds > 0 ? seconds + 's' : ''}`
   }
+ 

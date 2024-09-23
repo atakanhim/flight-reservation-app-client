@@ -32,7 +32,6 @@ const flightSlice = createSlice({
   },
 });
 
-console.log(flightSlice);
 export const {
 addToCart,
 clearCart

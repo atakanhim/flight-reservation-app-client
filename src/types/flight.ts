@@ -1,4 +1,5 @@
 export interface FlightData {
+
     lastUpdatedAt: string;
     actualLandingTime: string;
     aircraftType: {
@@ -8,12 +9,13 @@ export interface FlightData {
     baggageClaim: {
       belts: string[];
     };
-    estimatedLandingTime: string;
+    estimatedLandingTime?: string;
     expectedTimeOnBelt: string;
     flightDirection: string;
     flightName: string;
     flightNumber: number;
     id: string;
+    _id?: string;
     isOperationalFlight: boolean;
     mainFlight: string;
     prefixIATA: string;
