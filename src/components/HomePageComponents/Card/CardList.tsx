@@ -1,5 +1,7 @@
 import Card from "./Card";
 import Card1 from '../../../assets/card1.jpeg';
+import Card2 from '../../../assets/card2.webp';
+import Card3 from '../../../assets/card3.jpg';
 import { FaCarRear } from "react-icons/fa6";
 
 
@@ -14,16 +16,17 @@ export default function CardList() {
                 iconText="CAR RENTALS"
             />
             <Card
-                src={Card1}
-                alt="Card1"
+                src={Card2}
+                alt="Card2"
                 icon={FaCarRear}
-                iconText="CAR RENTALS"
+                iconText="HOTELS"
             />
             <Card
-                src={Card1}
-                alt="Card1"
+                src={Card3}
+                alt="Card3"
                 icon={FaCarRear}
-                iconText="CAR RENTALS"
+                iconText="TRAVEL PACKAGES"
+
             />
 
         </div>
