@@ -3,7 +3,10 @@ import { TripType } from "../types/interfaces";
 import { FlightData } from "../types/flight";
 // categories
 
-const API_URL = "http://localhost:3000/"
+//const API_URL  = import.meta.env.VITE_REACT_APP_API_LOCAL; //  local url 
+
+const API_URL  = import.meta.env.VITE_REACT_APP_API_KEY; // production url
+
 console.log(API_URL);
 
 export const getFlightsFromDB = async (flightDate?:Date,arrival?:string,departure?:string,returnDate?,tripType?:TripType) => {
