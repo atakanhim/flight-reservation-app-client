@@ -1,4 +1,4 @@
-import { DatePicker, DateBuilderReturnType } from '@mui/x-date-pickers';
+import { DatePicker } from '@mui/x-date-pickers';
 import { useState } from 'react'
 import { FaPlane } from "react-icons/fa";
 import { FaPlaneArrival, FaPlaneDeparture } from "react-icons/fa";
