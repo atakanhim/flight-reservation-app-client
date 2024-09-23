@@ -11,10 +11,10 @@ Projede, kullanıcının seçtiği uçuş yönü ve tarihine göre uçuşlar fil
 
 ## 🌟 Projemi Canlı Test Edin
 
-[Bu adrese tıklayarak canlı demosuna ulaşabilirsiniz ](flight-reservation.onrender.com)
+[Bu adrese tıklayarak canlı demosuna ulaşabilirsiniz [flight-reservation.onrender.com] ](flight-reservation.onrender.com)
 
  Uygulamanın her 2 tarafınıda (Client ve Server) onrender.com sitesi üzerinden canlıya alınmıştır. Ücretsiz sürüm seçeneği ile projeyi başlattığım için `Server` kısmı kısmen ayakta durumundadır; bu durumda uygulama, tekrar çalıştırılana kadar uyku moduna girmektedir. Bu, `ilk denemenizde` verilerin 50-60 saniye gecikmeli çekilmesine neden olabilir. Ayrıca, uygulamanın her zaman aktif kalması için `Client ` ` statik `  olarak publish edilmiştir. Bu nedenle, `/MyFlightsReservation`  sayfasına doğrudan bağlantı ile gitmek yerine başka bir yöntemle erişmeye çalışırsanız 404 hatası alabilirsiniz.
-"flight-reservation.onrender.com"
+
 
 ## 🌟 Projemi Bilgisayarınızda Çalıştırın
 
