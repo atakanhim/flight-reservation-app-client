@@ -16,7 +16,7 @@ Projede, kullanıcının seçtiği uçuş yönü ve tarihine göre uçuşlar fil
  Uygulamanın her 2 tarafınıda (Client ve Server) onrender.com sitesi üzerinden canlıya alınmıştır. Ücretsiz sürüm seçeneği ile projeyi başlattığım için `Server` kısmı kısmen ayakta durumundadır; bu durumda uygulama, tekrar çalıştırılana kadar uyku moduna girmektedir. Bu, `ilk denemenizde` verilerin 50-60 saniye gecikmeli çekilmesine neden olabilir. Ayrıca, uygulamanın her zaman aktif kalması için `Client ` ` statik `  olarak publish edilmiştir. Bu nedenle, `/MyFlightsReservation`  sayfasına doğrudan bağlantı ile gitmek yerine başka bir yöntemle erişmeye çalışırsanız 404 hatası alabilirsiniz.
 
 
-## 🌟 Projemi Bilgisayarınızda Çalıştırın
+## 💻 Projemi Bilgisayarınızda Çalıştırın
 
 Projeyi klonlayın
 
